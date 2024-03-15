@@ -18,3 +18,16 @@ def merge(list1, list2):
         combined.append(list2[j])
         j += 1
     return combined
+
+
+def merge_sort(my_list):
+    if len(my_list) == 1:
+        return my_list
+    mid_index = int(len(my_list)/2)
+    right = merge_sort(my_list[:mid_index])
+    left = merge_sort(my_list[mid_index:])
+
+    return merge(right, left)
+
+
+print(merge_sort([43, 3, 77, 89, 4, 20]))
