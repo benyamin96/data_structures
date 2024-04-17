@@ -28,6 +28,3 @@ def merge_sort(my_list):
     left = merge_sort(my_list[mid_index:])
 
     return merge(right, left)
-
-
-print(merge_sort([43, 3, 77, 89, 4, 20]))
